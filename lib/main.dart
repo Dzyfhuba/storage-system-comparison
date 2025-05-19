@@ -221,10 +221,10 @@ class _TodoListScreenState extends State<TodoListScreen> {
         child: const Icon(Icons.add),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
+        currentIndex: 1,
         onTap: (idx) {
           if (idx == 1) {
-            Navigator.push(
+            Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => ObjectBoxScreen()),
             );

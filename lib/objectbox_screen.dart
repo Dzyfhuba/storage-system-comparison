@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:storage_system_comparison/main.dart';
 import 'package:storage_system_comparison/objectbox.g.dart';
 import 'package:storage_system_comparison/todo.dart';
 
@@ -140,6 +141,27 @@ class _ObjectBoxScreenState extends State<ObjectBoxScreen> {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        onTap: (idx) {
+          if (idx == 0) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => TodoListScreen()),
+            );
+          }
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Sqflite',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.square),
+            label: 'ObjectBox',
+          ),
+        ],
       ),
     );
   }
