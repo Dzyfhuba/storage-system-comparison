@@ -80,7 +80,7 @@ class _ObjectBoxScreenState extends State<ObjectBoxScreen> {
                     title: Text(item.title),
                     trailing: IconButton(
                       icon: Icon(Icons.delete),
-                      onPressed: () => _deleteItem(item.id!),
+                      onPressed: () => _deleteItem(item.id),
                     ),
                   );
                 },
